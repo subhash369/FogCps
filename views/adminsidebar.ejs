@@ -1,0 +1,82 @@
+
+
+<!-- <body >  -->
+    <style>
+        h4{
+          background-color: rgb(78, 75, 75);
+        }
+        a{
+          text-decoration:none;
+          cursor:pointer;
+          color: #2a2a2a;
+        }
+        .widget li a{
+          display:block;
+          padding:10px 0;
+        }
+        .widget li {
+          font-weight: 200;
+          border-bottom: 1px dotted #e5e5e5;
+      }
+        ul {
+          list-style: none;
+         }
+      
+      
+      </style>
+      
+           <div class="widget">
+            <h4>RECENT NEWS</h4>
+
+            
+             
+            <ul>
+              <% news.forEach(function(x){ %>
+                <li style="border:0.5px dotted ">
+                    <span><form action="/deletenews" method="post">
+                        <input type="hidden" value="<%=x._id %>" name="newsId">
+                        <span style="flex:end"><button style="display:inline-block" type="submit">X</button></span>
+                        <span><a href="/news/<%=x._id %>"> <%= x.title %></a></span>
+                     </form></span> </li>
+                
+
+            <% }); %>
+              
+            </ul>
+           </div>
+            
+            
+            
+      
+          <h4 style="text-align: left;">UPCOMING EVENTS</h4>
+          <ul>
+            <% events.forEach(function(x){ %>
+                <li style="border:0.5px dotted ">
+                    <span><form action="/deleteevents" method="post">
+                        <input type="hidden" value="<%=x._id %>" name="eventId">
+                       <button style="display:block" type="submit">X</button>
+                        <a href="/events/<%=x._id %>"> <%= x.title %></a>
+                        <span><%=x.startDate%></span>
+                        --
+                       <span><%=x.endDate%></span>
+                     </form></span> </li>
+             
+              
+              
+          <% }); %>
+            
+          </ul>
+              <h4 >CONTACT US</h4>
+              <strong>Fog-CPS <br> IIIT Allahabad </strong>
+              <br/>
+              <strong>Prayagraj, UP, India 211015</strong> <em>[<a href="https://www.google.co.in/maps/place/Indian+Institute+of+Information+Technology,+Allahabad/@25.4294529,81.7675777,17z/data=!3m1!4b1!4m6!3m5!1s0x399acda4892cc187:0xb07e2e87ab51e82a!8m2!3d25.4294481!4d81.7701526!16zL20vMDYyeXQ0?hl=en">Map</a>]</em>
+              <br/>
+              <img src="https://it.iiita.ac.in/images/IIIT_logo_transparent.gif" height="50px"/>
+              
+              <p>Phone: +91-701-703-1015</p>
+              <p>Fax: +91-80-2360 6332</p>
+              <p>E-mail: office@fcsl.iiita.ac.in</p>
+              <p>Web: fcsl.iiita.ac.in</p>
+          
+      <!-- </body>
+      </html> -->

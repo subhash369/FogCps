@@ -1,0 +1,126 @@
+<%- include("adminnavbar") -%>
+  
+  
+     <div class="container admin-scholar">
+         <h1>Add</h1>
+          
+         <form action="/addsch" method="post">
+        
+            <div class="form-group">
+                <label >Id:</label>
+                <input type="text" class="form-control" name="id">
+              </div>
+            <div class="form-group">
+                <label >Name:</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group">
+                <label >from:</label>
+                <input type="text" class="form-control" name="from">
+            </div>
+            <div class="form-group">
+                <label >to:</label>
+                <input type="text" class="form-control" name="to">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+         <h1>delete</h1>
+         
+         <form action="/delsch" method="post">
+            <div class="form-group">
+                <label for="id">Id:</label>
+                <input type="text" class="form-control" name="id">
+              </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+     </div>
+
+
+
+     <div class="container admin-mtech">
+        <h1>Add</h1>
+          
+         <form action="/addmtech" method="post">
+
+            <div class="form-group">
+                <label >Id:</label>
+                <input type="text" class="form-control" name="id">
+              </div>
+            <div class="form-group">
+                <label >Name:</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group">
+                <label >from:</label>
+                <input type="text" class="form-control" name="from">
+            </div>
+            <div class="form-group">
+                <label >to:</label>
+                <input type="text" class="form-control" name="to">
+            </div>
+            <div class="form-group">
+                <label >Research Area</label>
+                <input type="text" class="form-control" name="ra">
+            </div>
+             
+
+            <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+         <h1>delete</h1>
+         
+         <form action="/delmtech" method="post">
+            <div class="form-group">
+                <label for="id">Id:</label>
+                <input type="text" class="form-control" name="id">
+              </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+     </div>
+
+
+     <div class="container admin-btech">
+        <h1>Add</h1>
+          
+        <form action="/addbtech" method="post">
+
+           <div class="form-group">
+               <label >Id:</label>
+               <input type="text" class="form-control" name="id">
+             </div>
+           <div class="form-group">
+               <label >Name:</label>
+               <input type="text" class="form-control" name="name">
+           </div>
+           <div class="form-group">
+               <label >from:</label>
+               <input type="text" class="form-control" name="from">
+           </div>
+           <div class="form-group">
+               <label >to:</label>
+               <input type="text" class="form-control" name="to">
+           </div>
+           <div class="form-group">
+               <label >Project Title</label>
+               <input type="text" class="form-control" name="pt">
+           </div>
+            
+
+           <button type="submit" class="btn btn-default">Submit</button>
+     </form>
+
+        <h1>delete</h1>
+        
+        <form action="/delbtech" method="post">
+           <div class="form-group">
+               <label for="id">Id:</label>
+               <input type="text" class="form-control" name="id">
+             </div>
+           <button type="submit" class="btn btn-default">Submit</button>
+       </form>
+     </div>
+
+ 
+<%- include("foot") -%>

@@ -1,0 +1,223 @@
+<%- include('navbar') -%>
+  <!--CSS Stylesheet-->
+	<link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <style>
+		#customers {
+		  font-family: Arial, Helvetica, sans-serif;
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+		
+		#customers td, #customers th {
+		  border: 1px solid #ddd;
+		  padding: 8px;
+		}
+		
+		#customers tr:nth-child(even){background-color: #f2f2f2;}
+		
+		#customers tr:hover {background-color: #ddd;}
+		
+		#customers th {
+		  padding-top: 12px;
+		  padding-bottom: 12px;
+		  text-align: left;
+		  background-color: grey;
+		  color: white;
+		}
+
+		.flex-container {
+			display: flex;
+			
+		  }
+		  
+		  .flex-container > div {
+			
+			margin: 5%;
+			text-align: center;
+			
+		  }
+
+		</style>
+  
+
+  <div class="row" style="margin: 0%;">
+    <!-- <div class="col-12"style="padding:0%;" include-html="navbar.html">navbar</div> -->
+    <!-- Force next columns to break to new line -->
+    <div class="w-100"></div>
+    <div class="col-sm-8" >
+      <div class="flex-container">
+        <div>
+      <h1 style="color: grey;">Scholars</h1>
+    <!--phd Table starts here -->
+    <table id="customers">
+      <tr>
+        <th>sl No.</th>
+        <th>Name</th>
+        <th>Year of graduation</th>
+      </tr>
+      
+      <% let serialNo=1;%>
+     <% schdt.forEach((sch)=>{ %>
+        <tr>
+          <td><%=serialNo++ %></td>
+          <td><%=sch.name %></td>
+          <td><%=sch.yeari %> - <%=sch.yearf %></td>
+        </tr>
+     <% }) %>
+      
+    
+
+      <!-- <tr>
+        <td>2</td>
+        <td>Mr. Junaid Alam</td>
+        <td>2022-present</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Ms. Abha Upadhayay</td>
+        <td>2022-present</td>
+      </tr> -->
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <!-- phd Table ends here -->
+    
+    
+    <% serialNo=1;%>
+    <!-- Mtech table starts here -->
+    <h1 style="color: grey;">Mtech Students</h1>
+    <!-- Table starts here -->
+    <table id="customers">
+      <tr>
+        <th>sl No.</th>
+        <th>Name</th>
+        <th>Year of graduation</th>
+        <th>Research Area</th>
+      </tr>
+
+      <% mtechdt.forEach((mdt)=>{ %>
+        <!-- console.log(mdt); -->
+        <tr>
+          <td><%= serialNo++ %></td>
+          <td><%=mdt.name%></td>
+          <td><%=mdt.yeari%> - <%=mdt.yearf%></td>
+          
+          <td><%=mdt.researchArea%></td>
+        </tr>
+      <% }); %>
+      
+      <!-- <tr>
+        <td>2</td>
+        <td>Mr. Shiv Shankar</td>
+        <td>2022-Ongoing</td>
+        <td>Network Security</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Mr. Arghya Maji</td>
+        <td>2022-Ongoing</td>
+        <td>Cryptography</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Mr. Arnab Majumder</td>
+        <td>2022-Ongoing</td>
+        <td>Blockchain Technology</td>
+      </tr> -->
+    </table>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Mtech table ends here -->
+    
+    <% serialNo=1;%>
+    <!-- Mtech Scholar table starts here -->
+    <h1 style="color: grey;">BTech Students</h1>
+    <!-- Table starts here -->
+    <table id="customers">
+      <tr>
+        <th>sl No.</th>
+        <th>Name</th>
+        <th>Year of graduation</th>
+        <th>Project Title</th>
+      </tr>
+
+      <% btechdt.forEach((bdt)=>{ %>
+        <tr>
+          <td><%=serialNo++%></td>
+          <td><%=bdt.name%></td>
+          <td><%=bdt.yeari%> - <%=bdt.yearf%></td>
+          
+          <td><%=bdt.projectTitle%></td>
+        </tr>
+     <% }); %>
+      <!-- <tr>
+        <td>2</td>
+        <td>MRITYUNJAY TIWARI</td>
+        <td>2019-23</td>
+        <td>Networking</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>KODI PRAVALLIKA</td>
+        <td>2019-23</td>
+        <td>Networking</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>KRISHNA KOUNDINYA KAIPA</td>
+        <td>2019-23</td>
+        <td>License conflicts in Secure Software Ecosystems</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>MAITRY JADIYA</td>
+        <td>2019-23</td>
+        <td>Fake Document reduction using Blockchain</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>PRITIK SHRIVASTAVA</td>
+        <td>2019-23</td>
+        <td>Fake Document reduction using Blockchain</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>AKSHAY ANSHUL</td>
+        <td>2019-23</td>
+        <td>Fake Document reduction using Blockchain</td>
+      </tr> -->
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+    </div>
+    </div>
+    <div class="col-sm-4" >
+        
+         <%- include('sidebar') -%>
+          
+    </div>
+  </div>
+	  
+
+
+	
+<script>includeHTML()</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+
+</body>
+</html>

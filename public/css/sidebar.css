@@ -1,0 +1,33 @@
+.sidebar-index{
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    float: right;
+}
+.widget a{
+    color: #2a2a2a;
+    text-decoration: none;
+    display:block;
+    padding:10px 0;
+}
+.template1 h1{
+    /* padding:20px; */
+    margin-bottom: 1.25rem;
+    background: #f5f5f5;
+    color: black;
+    text-transform: uppercase;
+}
+.template2 h1{
+    padding:20px;
+    margin-bottom: 1.25rem;
+    color: black;
+    background: #f5f5f5;
+    text-transform: uppercase;
+}
+.template3 h1{
+    color: black;
+    padding:20px;
+    margin-bottom: 1.25rem;
+    background: #f5f5f5;
+    text-transform: uppercase;
+}

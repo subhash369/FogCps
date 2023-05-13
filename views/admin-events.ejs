@@ -1,0 +1,34 @@
+<%- include("adminnavbar") -%>
+
+<h1>Compose</h1>
+    <form class="" action="/admin-events" method="post">
+      <div class="form-group">
+        <label>Title</label>
+        <input class="form-control" type="text" name="postTitle">
+
+        <label >Start Date</label>
+        <input type="text"  name="postStart">
+
+        <label >End Date</label>
+        <input type="text"  name="postEnd">
+
+         <br>
+        <label>Post</label>
+        <textarea class="form-control" id="myTextarea" name="postBody" rows="5" cols="30" wrap="soft"></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit" name="button" onclick="dof">Publish</button>
+    </form>
+ 
+
+
+    <!-- <script>
+        function dof(e)
+        {
+
+            const textarea = document.querySelector('myTextarea');
+             const inputValue = textarea.value.replace(/\n/g, '<br>').replace(/ /g, '&nbsp;');
+             document.querySelector('myTextarea').innerHTML = inputValue;
+        }
+    </script> -->
+
+    <%- include("foot") -%>
